@@ -29,6 +29,7 @@ class list
 				r->partid = partid;
 				r->left = NULL;
 				r->right = NULL;
+				head = r;
 			}
 			
 			else
@@ -44,6 +45,23 @@ class list
 			}
 		}
 
+		void display()
+		{
+			node *p = head;
+			display(p);
+		}
+		void display(node *p)
+		{
+			
+			if (p!= NULL)
+			{
+				cout << "!NULL case in display!!";
+				cout << p->partid;
+				p->left;
+				p->right;
+			}
+			
+		}
 
 
 };
