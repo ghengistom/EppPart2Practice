@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+
+
+class list
+{
+	struct node
+	{
+		int partid;
+		node *left;
+		node *right;
+	};
+	node *head = NULL;
+	private:
+		
+	public:
+		void insert(int partid)
+		{
+			node *p = head;
+			insert(partid, p);
+		}
+		void insert(int partid, node *&p)
+		{
+			p = head;
+			if (p == NULL)
+			{
+				node *r = new node;
+				r->partid = partid;
+				r->left = NULL;
+				r->right = NULL;
+			}
+			
+			else
+			{
+				if (partid < p->partid)
+				{
+					insert(partid,p->left);
+				}
+				else if (partid > p->partid)
+				{
+					insert(partid, p->right);
+				}
+			}
+		}
+
+
+
+};
