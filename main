@@ -1,0 +1,43 @@
+#include <iostream>
+#include "list.h"
+using namespace std;
+
+int main()
+{
+	
+	int menu=0;
+	bool quitbool = true;
+	list object1;
+	int partid;
+	
+	while (quitbool)
+	{
+		cout << "Welcome to PART MANAGER \n";
+		cout << "Please choose 1 of the 5 options.\n";
+		cout << "1 for enter a new part to the system \n";
+		cout << "2 Find and print data for a part with ID # \n";
+		cout << "3 Find and modify data for a part with ID #\n";
+		cout << "4 Copy all info to a binary archive file  \n";
+		cout << "5 for quit \n";
+		cin >> menu;
+		
+		switch (menu)
+		{
+		case 1:
+			cout << "Please enter a part number \n";
+			cin >> partid;
+			object1.insert(partid);
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+}
