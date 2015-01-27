@@ -26,18 +26,12 @@ int main()
 		case 1:
 			cout << "Please enter a part number \n";
 			cin >> partid;
-			object1.insert(partid);
+			object1.insert(partid); break;
+
+		case 2:
+			object1.display(); break;
+
+		case 5:
+			quitbool = false;
 		}
 	}
-
-
-
-
-
-
-
-
-
-
-
-}
